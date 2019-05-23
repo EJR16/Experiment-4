@@ -1,0 +1,69 @@
+#include <iostream>
+
+
+using namespace std;
+void menu()
+{
+	int a, i, j;
+	
+	cout << "MENU: \n\n";
+	cout<<"1.Add"<<"\n"; 
+    cout<<"2.Subtract"<<"\n"; 
+    cout<<"3.Multiply"<<"\n"; 
+    cout<<"4.Divide"<<"\n"; 
+    cout<<"5.Modulus"<<"\n\n"; 
+	cout << "Choose the operation you want to perform: \n";
+}
+     int Addition(int i,int j){ 
+    return(i+j); 
+} 
+  
+     int Substraction(int i, int j){ 
+      return(i-j); 
+} 
+  
+int Multiplication(int i, int j){ 
+    return(i*j); 
+} 
+float Division(int i,int j){ 
+      return(i/j); 
+} 
+int Modulus(int i, int j){ 
+    return(i%j); 
+} 
+
+	int main()
+	{
+		menu();
+		int a, i, j, cont;
+	cin >> a;
+	cout << "Enter the 1st integer: " << endl;
+	cin >> i;
+	cout << "Enter the 2nd integer: " << endl;
+	cin >> j;
+	switch(a){
+ case 1:cout<<"The Answer is:"<<Addition(i,j)<<endl;;
+	 cout << "Continue? \nPress Y to continue:" ;
+	 cin >> i;
+	 break;
+ case 2:cout<<"The Answer is:"<<Substraction(i,j)<<endl;;
+	 cout << "Continue? \nPress Y to continue: " ;
+	 cin >> i; 
+	 break;
+ case 3:cout<<"The Answer is:"<<Multiplication(i,j)<<endl;;
+	 cout << "Continue? \nPress Y to continue: " ;
+	 cin >> i;
+	 break;
+ case 4:cout<<"The Answer is:"<<Division(i,j)<<endl;;
+	 cout << "Continue? \nPress Y to continue: " ;
+	 cin >> i;
+	 break;
+ case 5:cout<<"The Answer is:"<<Modulus(i,j)<<endl;;
+	 cout<<"Continue? \nPress Y to continue:"; 
+	 cin>>cont; 
+while(cont=='Y'); 
+	 break;
+ default:cout<<"invalid"; 
+	}                 
+	return 0;
+	}
