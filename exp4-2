@@ -1,0 +1,41 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+int main()
+{
+	int sizearr, out;
+	char arr[50], a, b;
+	cout<< "Enter the array size: ";
+	cin >> sizearr;
+	cout << "Enter the " << sizearr << " array elements: \n";
+	cout << "Your data: "<< endl;
+	for (a = 0; a < sizearr; a++)
+	{
+		cin >> arr[a];
+	}
+	
+	
+	for (a = 0; a < sizearr; a++)
+	{
+		for (b = a + 1; b < sizearr ; b++)
+		{
+			if (arr[a] > arr[b])
+			{
+				out = arr[a];
+				arr[a] = arr[b];
+				arr[b] = out;
+			}
+		}
+	}
+	
+
+	cout << "Result after using selection sorting \n";
+	cout << "Sorted data: \n";
+	for (a = 0; a < sizearr; a++)
+	{
+		cout << arr[a];
+	}
+    _getch();
+ 	return 0;
+}
